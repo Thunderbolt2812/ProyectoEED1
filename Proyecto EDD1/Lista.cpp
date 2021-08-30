@@ -17,24 +17,17 @@ Nodo* Lista::Salto(int pos) {
 	return aux;
 }
 void Lista::Imprime() {
-	if(inicio) {
-		Nodo* aux = inicio;
-		while(aux) {
-			cout<<aux->getDato()<<endl;
-			aux = aux->getSiguiente();
-		}
-	}
 	int auxi = Elementos;
 	if(Elementos > 0){
 		Nodo* aux = inicio;
 		while(auxi > 0){
-			cout<<aux->getDato()<<endl;
+			cout<<aux->getDato()->getTask()<<endl;
 			aux = aux->getSiguiente();
 			auxi--;
 		}
 	}
 }
-bool Lista::Inserta(int pos, TDato* dato) {
+bool Lista::Inserta(int pos, Task* dato) {
 	if ((pos < 1 || pos > Elementos + 1)) {
 		return false;
 	} else {
@@ -72,8 +65,8 @@ bool Lista::Inserta(int pos, TDato* dato) {
 		}
 	}
 }
-TDato* Lista::Suprime(int pos) {
-	TDato* valor = NULL;
+Task* Lista::Suprime(int pos) {
+	Task* valor = NULL;
 	if (pos > 0 && pos <= Elementos) {
 		Nodo* aux = inicio;
 		Nodo* aux2;
@@ -127,7 +120,7 @@ void Lista::Anula() {
 	}
 	Elementos = 0;
 }
-int Lista::Localiza(TDato* obj) {
+int Lista::Localiza(Task* obj) {
 	int num = 1;
 	Nodo *aux = inicio;
 	while ((aux != NULL) && (num <= Elementos)) {
@@ -145,16 +138,16 @@ int Lista::Localiza(TDato* obj) {
 	}
 	return -1;
 }
-TDato* Lista::Siguiente(int pos) {
+Task* Lista::Siguiente(int pos) {
 	if (pos < 1 || pos >= Elementos) {
-		TDato* valor = NULL;
+		Task* valor = NULL;
 		return valor;
 	} else {
 		Nodo *aux = Salto(pos + 2);
 		return aux->getDato();
 	}
 }
-TDato* Lista::Anterior(int pos) {
+Task* Lista::Anterior(int pos) {
 	if (pos > 1 && pos <= Elementos) {
 		Nodo* aux = inicio;
 		aux = Salto(pos);
@@ -163,7 +156,7 @@ TDato* Lista::Anterior(int pos) {
 		return NULL;
 	}
 }
-TDato* Lista::Recupera(int pos) {
+Task* Lista::Recupera(int pos) {
 	if (pos == 1) {
 		return Primero();
 	} else if (pos >= 2 && pos <= Elementos ) {
@@ -173,7 +166,7 @@ TDato* Lista::Recupera(int pos) {
 		return 0;
 	}
 }
-TDato* Lista::Primero() {
+Task* Lista::Primero() {
 	if(inicio)
 		return inicio->getDato();
 	else

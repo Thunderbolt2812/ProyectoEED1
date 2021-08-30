@@ -4,7 +4,7 @@ Nodo::Nodo() {
 	Dato = 0;
 	Siguiente = 0;
 }
-Nodo::Nodo(TDato* Dato1) {
+Nodo::Nodo(Task* Dato1) {
 	Siguiente = 0;
 	Anterior = 0;
 	if(Dato)
@@ -24,10 +24,10 @@ void Nodo::setSiguiente(Nodo* Siguiente) {
 Nodo* Nodo::getSiguiente()  {
 	return Siguiente;
 }
-TDato* Nodo::getDato() {
+Task* Nodo::getDato() {
 	return Dato;
 }
-void Nodo::setDato(TDato* Dato1) {
+void Nodo::setDato(Task* Dato1) {
 	Dato = Dato1;
 }
 Nodo::Nodo(const Nodo& N) {

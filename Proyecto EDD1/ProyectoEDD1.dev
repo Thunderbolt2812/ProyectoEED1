@@ -100,8 +100,28 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
+[Unit8]
+FileName=Task.hpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=Task.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit6]
-FileName=TDato.cpp
+FileName=Task.hpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -111,7 +131,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=TDato.hpp
+FileName=Task.cpp
 CompileCpp=1
 Folder=
 Compile=1

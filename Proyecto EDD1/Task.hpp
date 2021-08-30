@@ -5,10 +5,9 @@
 using namespace std;
 class Task {
 	public:
+		string tarea;
 		Task(string);
 		bool equals(Task*);
-		string toString();
-	private:
-		string tarea;
+		string getTask();
 };
 #endif

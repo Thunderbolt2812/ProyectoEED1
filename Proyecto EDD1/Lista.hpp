@@ -7,15 +7,15 @@ class Lista{
 		Lista();
 		Lista(const Lista& L);
 		virtual ~Lista();
-		bool Inserta(int, TDato* );
-		TDato* Suprime(int);
+		bool Inserta(int, Task* );
+		Task* Suprime(int);
 		void Anula();
-		int Localiza(TDato*);
-		TDato* Siguiente(int);
-		TDato* Anterior(int);
-		TDato* Recupera(int);
+		int Localiza(Task*);
+		Task* Siguiente(int);
+		Task* Anterior(int);
+		Task* Recupera(int);
 		void Imprime();
-		TDato* Primero();
+		Task* Primero();
 		bool Vacia();
 		int Elementos;
 	private:
